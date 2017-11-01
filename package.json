@@ -1,6 +1,6 @@
 {
   "name": "rpi-dualbootify",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Combine two raspberry pi images into a single one that contains both",
   "dependencies": {},
   "devDependencies": {},
