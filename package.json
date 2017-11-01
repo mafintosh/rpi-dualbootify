@@ -1,0 +1,20 @@
+{
+  "name": "rpi-dualbootify",
+  "version": "0.0.0",
+  "description": "Combine two raspberry pi images into a single one that contains both",
+  "dependencies": {},
+  "devDependencies": {},
+  "bin": {
+    "rpi-dualbootify": "./bin.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/rpi-dualbootify.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/rpi-dualbootify/issues"
+  },
+  "homepage": "https://github.com/mafintosh/rpi-dualbootify"
+}
