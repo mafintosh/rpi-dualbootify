@@ -23,12 +23,15 @@ shift
 while true; do
   case "$1" in
     --extra-sectors) EXTRA_SECTORS=$2; shift; shift ;;
-    --extra-bytes)   EXTRA_SECTORS=$(($2 / 512)); shift; shift ;;
+    --extra-bytes)   EXTRA_BYTES=$2; shift; shift ;;
     *)               break ;;
   esac
 done
 
-echo "extra $EXTRA_SECTORS"
+if [ "$EXTRA_BYTES" != "" ]; then
+  EXTRA_BYTES=$(($(echo $EXTRA_BYTES | sed 's|[bB]||' | sed 's|[kK]|* 1024|' | sed 's|[mM]|* 1024 * 1024|' | sed 's|[gG]|* 1024 * 1024 * 1024|')))
+  EXTRA_SECTORS=$(($EXTRA_BYTES / 512))
+fi
 
 parse_image () {
   local IFS=$'\n'
